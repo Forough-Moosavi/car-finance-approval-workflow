@@ -1,80 +1,126 @@
-# Car Finance Approval & Reporting Workflow
-
-An end-to-end car finance approval and reporting solution built using Microsoft Power Platform components.
+# Car Finance Approval Workflow
 
 ## Overview
 
-This project demonstrates how Microsoft Forms, Power Automate, Excel Online, Outlook, and Power BI can be integrated to automate and monitor a complete car finance approval process.
+This project demonstrates a complete end-to-end business process automation solution built using Microsoft Power Platform.
 
-The solution collects finance applications, generates unique application IDs, routes requests for approval, updates records automatically, notifies applicants of decisions, and provides management reporting through an interactive Power BI dashboard.
+The solution automates the car finance application process from submission to final decision, reducing manual work, improving tracking, and ensuring a consistent approval workflow.
+
+The project integrates Microsoft Forms, Power Automate, Excel Online, Outlook, and Power BI into a single automated workflow.
+
+---
+
+## Business Problem
+
+Manual finance application processing often involves:
+
+- Repetitive data entry
+- Email back-and-forth communication
+- Approval delays
+- Lack of visibility into application status
+- Difficult reporting and tracking
+
+This solution addresses these challenges by creating a fully automated approval process.
+
+---
+
+## Solution Architecture
+
+The workflow performs the following steps:
+
+1. Applicant submits a finance application using Microsoft Forms.
+2. Power Automate retrieves the submitted information.
+3. A unique Application ID is generated automatically.
+4. Application details are stored in Excel Online.
+5. An approval request is sent to the reviewer.
+6. Reviewer approves or rejects the application.
+7. Excel records are automatically updated.
+8. Applicant receives an email notification with the final decision.
+9. Power BI provides reporting and analytics on submitted applications.
 
 ---
 
 ## Technologies Used
 
-* Microsoft Forms
-* Power Automate
-* Excel Online
-* Outlook
-* Approval Actions
-* Power BI
+| Technology | Purpose |
+|------------|----------|
+| Microsoft Forms | Application collection |
+| Power Automate | Workflow automation |
+| Excel Online | Application database |
+| Outlook | Email notifications |
+| Approval Actions | Decision management |
+| Power BI | Reporting and dashboarding |
 
 ---
 
-## Workflow
+## Workflow Features
 
-1. A customer submits a finance application through Microsoft Forms.
-2. Power Automate retrieves the submitted response.
-3. A unique Application ID is generated automatically.
-4. The application is stored in Excel Online.
-5. An approval request is sent to the reviewer.
-6. The reviewer approves or rejects the application.
-7. Excel is updated automatically with:
+### Automated Application Intake
 
-   * Status
-   * Decision Date
-8. The applicant receives an automated email notification containing the final decision.
-9. Power BI provides real-time reporting and analytics based on application data.
+Applications are collected through a structured Microsoft Form and processed automatically.
+
+### Unique Application ID Generation
+
+Each submission receives a unique identifier for tracking and reporting.
+
+Example:
+
+APP-20260605-145453
+
+### Automated Approval Process
+
+Applications are routed automatically to an approver without manual intervention.
+
+### Approval and Rejection Handling
+
+The workflow supports:
+
+- Approval
+- Rejection
+
+with automatic status updates.
+
+### Email Notifications
+
+Applicants receive automated notifications after a decision is made.
+
+### Excel-Based Tracking
+
+All applications are stored centrally and updated automatically.
+
+### Business Reporting
+
+Power BI dashboards provide visibility into:
+
+- Application volumes
+- Approval rates
+- Rejection rates
+- Total requested finance amounts
+- Priority distribution
 
 ---
 
-## Features
+# Process Flow
 
-* Automatic Application ID generation
-* Excel-based application tracking
-* Approval and rejection workflow
-* Automated email notifications
-* Decision date logging
-* End-to-end automation without coding
-* Power BI reporting dashboard
-* Approval rate monitoring
-* Application status analytics
-* Priority distribution analysis
-* Finance amount reporting
-
----
-
-## Power BI Dashboard
-
-The project includes an interactive Power BI dashboard connected to the finance application dataset.
-
-### Dashboard KPIs
-
-* Total Finance Amount
-* Total Applications
-* Approved Applications
-* Rejected Applications
-* Approval Rate (%)
-
-### Dashboard Visualizations
-
-* Finance Amount by Status
-* Application Count by Status
-* Application Count by Priority
-* Interactive Status Filters
-* Interactive Priority Filters
-
-The dashboard provides real-time visibility into application performance, approval trends, and business metrics.
+```text
+Application Form
+       ↓
+Power Automate
+       ↓
+Generate Application ID
+       ↓
+Store in Excel
+       ↓
+Approval Request
+       ↓
+Approve / Reject
+       ↓
+Update Excel
+       ↓
+Notify Applicant
+       ↓
+Power BI Dashboard
+```
 
 ---
 
@@ -82,66 +128,102 @@ The dashboard provides real-time visibility into application performance, approv
 
 ### Application Form
 
-![Application Form](screenshots/application-form.png)
+![Application Form](screenshots/form.png)
+
+Applicant-facing form used to submit finance requests.
+
+---
 
 ### Power Automate Workflow
 
-![Workflow](screenshots/workflow.png)
+![Workflow](screenshots/flow.png)
+
+End-to-end workflow built using Microsoft Power Automate.
+
+---
 
 ### Approval Request Email
 
-![Approval Email](screenshots/approval-email.png)
+![Approval Request](screenshots/approval-email.png)
 
-### Excel Database
+Approval request automatically delivered to the reviewer.
+
+---
+
+### Excel Application Database
 
 ![Excel Output](screenshots/excel-output.png)
+
+Centralized application tracking and status management.
+
+---
 
 ### Approved Notification
 
 ![Approved Email](screenshots/approved-email.png)
 
+Automatic approval notification sent to applicants.
+
+---
+
 ### Rejected Notification
 
 ![Rejected Email](screenshots/rejected-email.png)
 
+Automatic rejection notification sent to applicants.
+
+---
+
 ### Power BI Dashboard
 
-![Dashboard](screenshots/dashboard.png)
+![Power BI Dashboard](screenshots/dashboard.png)
+
+Interactive dashboard for monitoring application activity and approval performance.
 
 ---
 
-## Business Value
+## Key Skills Demonstrated
 
-This solution demonstrates how low-code technologies can be used to automate business processes, reduce manual work, improve decision tracking, and provide management visibility through real-time reporting.
+- Business Process Automation
+- Microsoft Power Automate
+- Microsoft Forms Integration
+- Excel Online Integration
+- Outlook Automation
+- Approval Workflows
+- Process Design
+- Workflow Development
+- Data Tracking
+- Dashboard Development
+- Power BI Reporting
 
 ---
 
-## Future Improvements
+## Potential Enhancements
 
-* AI-assisted risk assessment
-* Multi-level approval workflow
-* Dataverse integration
-* Customer portal integration
-* Power Apps front-end
-* Advanced reporting and forecasting
+Future versions may include:
+
+- Multi-level approvals
+- Risk scoring engine
+- AI-assisted application assessment
+- Dataverse integration
+- SharePoint integration
+- Automated fraud checks
+- Applicant self-service portal
+- Advanced Power BI analytics
 
 ---
 
 ## Author
 
-**Forough S. Moosavi**
+**Forough Moosavi**
+
+Data Analyst | Business Intelligence | Process Automation
+
+LinkedIn:
+https://www.linkedin.com/in/forough-s-moosavi
 
 ---
 
-## Repository Purpose
+## License
 
-This repository was created as a portfolio project to demonstrate practical skills in:
-
-* Business Process Automation
-* Power Automate
-* Microsoft Forms
-* Excel Online
-* Outlook Integration
-* Approval Workflows
-* Power BI Reporting
-* Low-Code Solutions
+This project is provided for educational and portfolio purposes.
