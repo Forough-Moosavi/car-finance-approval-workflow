@@ -164,7 +164,7 @@ Application data is stored automatically in Excel Online.
 
 The workflow enriches application data using Microsoft Graph API and updates records automatically.
 
-![Excel Results](screenshots/excel-results.png)
+![Excel Results](screenshots/excel-results .png)
 
 ---
 
