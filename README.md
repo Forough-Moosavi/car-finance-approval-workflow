@@ -136,31 +136,7 @@ The workflow retrieves form responses, generates Application IDs, enriches data 
 
 ---
 
-## Step 3 — Approval Workflow
-
-The application is automatically routed to a reviewer for approval or rejection.
-
-![Approval Workflow](screenshots/approval-workflow.png)
-
----
-
-## Step 4 — Manager Approval Request
-
-The reviewer receives an approval request containing the application details.
-
-![Approval Request](screenshots/approval-email.png)
-
----
-
-## Step 5 — Application Database
-
-Application data is stored automatically in Excel Online.
-
-![Excel Database](screenshots/excel-output.png)
-
----
-
-## Step 6 — Enriched Application Records
+## Step 3 — Enriched Application Records
 
 The workflow enriches application data using Microsoft Graph API and updates records automatically.
 
@@ -168,7 +144,24 @@ The workflow enriches application data using Microsoft Graph API and updates rec
 
 ---
 
-## Step 7 — Applicant Approval Notification
+## Step 4 — Approval Workflow
+
+The application is automatically routed to a reviewer for approval or rejection.
+
+![Approval Workflow](screenshots/approval-workflow.png)
+
+---
+
+## Step 5 — Manager Approval Request
+
+The reviewer receives an approval request containing the application details.
+
+![Approval Request](screenshots/approval-email.png)
+
+
+---
+
+## Step 6 — Applicant Approval Notification
 
 If approved, the applicant receives an automatic approval email.
 
@@ -176,7 +169,7 @@ If approved, the applicant receives an automatic approval email.
 
 ---
 
-## Step 8 — Applicant Rejection Notification
+## Step 7 — Applicant Rejection Notification
 
 If rejected, the applicant receives an automatic rejection email.
 
@@ -184,7 +177,7 @@ If rejected, the applicant receives an automatic rejection email.
 
 ---
 
-## Step 9 — Power BI Dashboard
+## Step 8 — Power BI Dashboard
 
 Business users can monitor applications, approval rates, rejection rates, and trends through Power BI.
 
