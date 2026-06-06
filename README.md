@@ -2,74 +2,99 @@
 
 ## Overview
 
-This project demonstrates an end-to-end business process automation solution built using Microsoft Power Platform.
+This project demonstrates a complete end-to-end business process automation solution built using Microsoft Power Platform.
 
-The workflow automates the vehicle finance application process from submission to final approval or rejection, reducing manual effort, improving tracking, and providing a structured approval process.
+The workflow automates the car finance application process from application submission through approval, decision tracking, email notifications, API enrichment, and business reporting.
 
-The solution integrates Microsoft Forms, Power Automate, REST APIs, Excel Online, Outlook, Approval Actions, and Power BI into a single automated workflow.
+The solution integrates Microsoft Forms, Power Automate, Microsoft Graph API, Excel Online, Outlook, Approval Actions, and Power BI into a single automated business process.
 
 ---
 
-## Business Scenario
+## Business Problem
 
-Many finance application processes rely on manual data entry, email communication, and spreadsheet tracking, which can lead to:
+Many finance application processes rely on manual steps that can result in:
 
-* Processing delays
-* Human errors
-* Poor visibility of application status
-* Inconsistent approval procedures
-* Difficult reporting and auditing
+- Repetitive data entry
+- Approval delays
+- Email back-and-forth communication
+- Poor application visibility
+- Inconsistent decision tracking
+- Limited reporting capabilities
 
-This solution automates the entire process and creates a centralized workflow for managing finance applications.
+This project addresses these challenges through workflow automation and centralized tracking.
 
 ---
 
 ## Solution Architecture
 
+The workflow performs the following steps:
+
+1. Applicant submits a finance application through Microsoft Forms.
+2. Power Automate retrieves application details.
+3. A unique Application ID is generated automatically.
+4. Microsoft Graph API retrieves user profile information.
+5. Application data is stored in Excel Online.
+6. An approval request is generated automatically.
+7. Reviewer approves or rejects the application.
+8. Excel records are updated automatically.
+9. Applicant receives an automated decision email.
+10. Power BI dashboards provide reporting and analytics.
+
+---
+
+## Process Flow
+
 ```text
-Applicant Submission
-        ↓
-Microsoft Forms
-        ↓
-Power Automate
-        ↓
+Microsoft Form
+       ↓
+Get Response Details
+       ↓
 Generate Application ID
-        ↓
-REST API Request
-        ↓
+       ↓
+Microsoft Graph API
+       ↓
 Parse JSON Response
-        ↓
-Store in Excel Online
-        ↓
-Email Notification
-        ↓
+       ↓
+Store in Excel
+       ↓
 Approval Request
-        ↓
-Approve / Reject Decision
-        ↓
-Update Application Status
-        ↓
-Power BI Reporting
+       ↓
+Approve / Reject
+       ↓
+Update Excel Status
+       ↓
+Send Notification Email
+       ↓
+Power BI Dashboard
 ```
+
+---
+
+## Technologies Used
+
+| Technology | Purpose |
+|------------|----------|
+| Microsoft Forms | Application collection |
+| Power Automate | Workflow automation |
+| Microsoft Graph API | User information retrieval |
+| HTTP Requests | API communication |
+| JSON Parsing | API response processing |
+| Excel Online | Application database |
+| Outlook | Email notifications |
+| Approval Actions | Approval management |
+| Power BI | Reporting and analytics |
 
 ---
 
 ## Workflow Features
 
-### Application Intake
+### Automated Application Intake
 
-Applicants submit requests through a Microsoft Form.
+Applications are collected through a structured Microsoft Form and processed automatically.
 
-Collected information includes:
+### Unique Application ID Generation
 
-* Applicant Name
-* Email Address
-* Vehicle Model
-* Requested Finance Amount
-
-### Automatic Application ID Generation
-
-Each application receives a unique identifier for tracking.
+Every application receives a unique identifier.
 
 Example:
 
@@ -77,146 +102,175 @@ Example:
 APP-20260605-145453
 ```
 
-### REST API Integration
+### Microsoft Graph API Integration
 
-Power Automate sends an HTTP request to an external API to retrieve additional user information.
+The workflow automatically retrieves:
 
-The API response is returned in JSON format and automatically processed.
+- User display name
+- Given name
+- Surname
+- Email address
+- Job title
+- Office location
 
-Retrieved fields include:
+This information is automatically stored alongside application records.
 
-* Office Location
-* User Email
-* Surname
-* User Profile Information
+### Automated Approval Process
 
-### JSON Parsing
+Applications are routed automatically to reviewers without manual intervention.
 
-API responses are parsed using the Parse JSON action, allowing structured extraction of required fields.
+### Approval and Rejection Handling
 
-### Excel Online Database
+The workflow supports:
 
-Applications are automatically stored and updated in Excel Online.
+- Approval
+- Rejection
 
-Stored information includes:
-
-* Application ID
-* Applicant Details
-* Finance Amount
-* Status
-* Priority
-* Notes
-* API Data
+with automatic status updates.
 
 ### Automated Email Notifications
 
-Email notifications are automatically sent throughout the process.
+Applicants receive automated notifications after a decision has been made.
 
-Examples:
+### Excel-Based Tracking
 
-* Application submitted
-* Application approved
-* Application rejected
-
-### Approval Workflow
-
-Applications are routed to an approver using Microsoft Approval Actions.
-
-Approvers can:
-
-* Review application details
-* Approve applications
-* Reject applications
-* Provide comments
-
-### Conditional Processing
-
-The workflow uses decision-based branching to perform different actions based on approval outcomes.
-
-Examples:
-
-* Approval email notification
-* Rejection email notification
-* Status update in Excel
-* Audit trail creation
+All applications are stored in a centralized Excel Online database.
 
 ### Power BI Reporting
 
-Application data can be visualized through Power BI dashboards to monitor:
+Interactive dashboards provide visibility into:
 
-* Application volumes
-* Approval rates
-* Rejection rates
-* Total requested finance amounts
-* Processing performance
-
----
-
-## Technologies Used
-
-| Technology       | Purpose                    |
-| ---------------- | -------------------------- |
-| Microsoft Forms  | Application collection     |
-| Power Automate   | Workflow automation        |
-| REST API         | Data enrichment            |
-| Parse JSON       | Structured data extraction |
-| Excel Online     | Application database       |
-| Outlook          | Email notifications        |
-| Approval Actions | Decision management        |
-| Power BI         | Reporting and dashboards   |
+- Total applications
+- Approval rates
+- Rejection rates
+- Requested finance amounts
+- Priority levels
+- Application trends
 
 ---
 
 ## Screenshots
 
+### Application Form
+
+![Application Form](screenshots/form.png)
+
+Applicant-facing form used to submit finance applications.
+
+---
+
 ### Workflow Overview
 
-End-to-end Power Automate workflow.
+![Workflow Overview](screenshots/flow-overview.png)
 
-### Approval Dashboard
+Complete workflow showing business process automation.
 
-Approval and rejection management interface.
+---
 
-### Excel Database
+### Power Automate Flow
 
-Automated application tracking and status management.
+![Power Automate Flow](screenshots/flow.png)
+
+Implementation of the workflow in Microsoft Power Automate.
+
+---
+
+### Approval Request
+
+![Approval Request](screenshots/approval-workflow.png)
+
+Approval request generated automatically for decision makers.
+
+---
+
+### Excel Application Database
+
+![Excel Database](screenshots/excel-output.png)
+
+Centralized storage of submitted applications.
+
+---
+
+### Excel Results After Processing
+
+![Excel Results](screenshots/excel-results.png)
+
+Application records enriched with API data and workflow results.
+
+---
+
+### Approval Notification
+
+![Approved Email](screenshots/approved-email.png)
+
+Automatic email sent after approval.
+
+---
+
+### Rejection Notification
+
+![Rejected Email](screenshots/rejected-email.png)
+
+Automatic email sent after rejection.
+
+---
 
 ### Power BI Dashboard
 
-Reporting and business analytics.
+![Dashboard](screenshots/dashboard.png)
+
+Interactive dashboard providing business insights and reporting.
 
 ---
 
-## Skills Demonstrated
+## Key Skills Demonstrated
 
-* Business Process Automation
-* Microsoft Power Automate
-* REST API Integration
-* HTTP Requests
-* JSON Parsing
-* Excel Online Integration
-* Outlook Automation
-* Approval Workflows
-* Conditional Logic
-* Data Management
-* Process Design
-* Business Reporting
-* Power BI Dashboard Development
+- Business Process Automation
+- Microsoft Power Automate
+- Microsoft Forms Integration
+- Microsoft Graph API
+- REST API Integration
+- HTTP Requests
+- JSON Parsing
+- Data Enrichment
+- Excel Online Integration
+- Outlook Automation
+- Approval Workflows
+- Process Design
+- Workflow Development
+- Data Tracking
+- Power BI Reporting
+- Business Intelligence
+- Low-Code Development
 
 ---
 
-## Future Enhancements
+## Business Benefits
 
-Potential improvements include:
+- Reduced manual processing
+- Faster approval decisions
+- Improved visibility
+- Centralized data storage
+- Automated notifications
+- Improved reporting capabilities
+- Reduced administrative effort
+- Scalable workflow design
 
-* Multi-level approval workflows
-* AI-assisted application assessment
-* Risk scoring engine
-* SharePoint integration
-* Dataverse integration
-* Automated fraud detection
-* Applicant self-service portal
-* Advanced Power BI analytics
+---
+
+## Potential Enhancements
+
+Future versions may include:
+
+- Multi-level approvals
+- AI-assisted application assessment
+- Risk scoring engine
+- Automated fraud detection
+- Dataverse integration
+- SharePoint integration
+- Applicant self-service portal
+- Advanced Power BI analytics
+- AI-generated decision summaries
 
 ---
 
@@ -227,10 +281,25 @@ Potential improvements include:
 Data Analyst | Business Intelligence | Process Automation
 
 LinkedIn:
+
 https://www.linkedin.com/in/forough-s-moosavi
 
 ---
 
 ## License
 
-This project is provided for educational and portfolio purposes.
+This project is provided for educational, demonstration, and portfolio purposes.
+
+---
+
+## Repository Purpose
+
+This repository demonstrates practical experience in:
+
+- Process Automation
+- Workflow Development
+- API Integration
+- Business Intelligence
+- Power Platform Solutions
+
+and serves as a portfolio project showcasing real-world business automation using Microsoft technologies.
