@@ -1,16 +1,16 @@
-# Car Finance Approval Workflow
+Car Finance Approval Workflow
 
-## Overview
+Overview
 
 This project demonstrates a complete end-to-end business process automation solution built using Microsoft Power Platform.
 
-The workflow automates the car finance application process from submission through approval, decision notification, Excel tracking, API enrichment, and Power BI reporting.
+The workflow automates the car finance application process from submission through approval, decision notification, Excel tracking, API enrichment, AI assessment, and Power BI reporting.
 
-The solution integrates Microsoft Forms, Power Automate, Microsoft Graph API, Excel Online, Outlook, Approval Actions, and Power BI into a single automated business workflow.
+The solution integrates Microsoft Forms, Power Automate, Microsoft Graph API, AI-powered assessment, Excel Online, Outlook, Approval Actions, and Power BI into a single automated business workflow.
 
 ---
 
-## Business Problem
+Business Problem
 
 Manual finance application processing often involves:
 
@@ -25,9 +25,8 @@ This project addresses these challenges by automating the entire approval lifecy
 
 ---
 
-## Solution Architecture
+Solution Architecture
 
-```text
 Microsoft Forms
        ↓
 Get Response Details
@@ -37,6 +36,8 @@ Generate Application ID
 Microsoft Graph API
        ↓
 Parse JSON Response
+       ↓
+AI Assessment
        ↓
 Store Data in Excel Online
        ↓
@@ -49,143 +50,154 @@ Update Excel Status
 Applicant Notification Email
        ↓
 Power BI Dashboard
-```
 
 ---
 
-## Technologies Used
+Technologies Used
 
-| Technology | Purpose |
-|------------|----------|
-| Microsoft Forms | Application collection |
-| Power Automate | Workflow automation |
-| Microsoft Graph API | User profile retrieval |
-| HTTP Requests | API communication |
-| Parse JSON | Response processing |
-| Excel Online | Application database |
-| Outlook | Email notifications |
-| Approval Actions | Decision management |
-| Power BI | Reporting and analytics |
+Technology| Purpose
+Microsoft Forms| Application collection
+Power Automate| Workflow automation
+Microsoft Graph API| API integration
+HTTP Requests| API communication
+Parse JSON| Response processing
+GPT-4.1 Mini| AI-powered assessment
+Excel Online| Application database
+Outlook| Email notifications
+Approval Actions| Decision management
+Power BI| Reporting and analytics
 
 ---
 
-## Workflow Features
+Workflow Features
 
-### Automated Application Intake
+Automated Application Intake
 
 Applications are collected through Microsoft Forms and processed automatically.
 
-### Unique Application ID Generation
+Unique Application ID Generation
 
 Every submission receives a unique identifier.
 
 Example:
 
-```text
 APP-20260605-145453
-```
 
-### Microsoft Graph API Integration
+Microsoft Graph API Integration
 
-The workflow automatically retrieves:
+The workflow demonstrates Microsoft Graph API integration through HTTP requests and JSON response processing.
 
-- User name
-- Email
-- Office location
-- Surname
+The API response is parsed automatically using the Parse JSON action and stored within the workflow for further processing.
 
-using Microsoft Graph API and stores the information in Excel.
+This demonstrates practical experience with:
 
-### Automated Approval Process
+- REST API Integration
+- HTTP Requests
+- JSON Processing
+- Data Enrichment Workflows
+- Microsoft 365 Integration
+
+AI-Assisted Assessment
+
+The workflow uses GPT-4.1 Mini to analyse finance applications and generate an AI assessment before human review.
+
+The AI evaluates submitted application information, including:
+
+- Applicant details
+- Vehicle information
+- Requested finance amount
+
+The generated assessment is automatically stored in Excel and can be used to support decision-making during the approval process.
+
+Automated Approval Process
 
 Applications are routed automatically to reviewers.
 
-### Approval & Rejection Handling
+Approval & Rejection Handling
 
 The workflow supports both approval and rejection paths with automatic updates.
 
-### Email Notifications
+Email Notifications
 
 Applicants receive automated emails once a decision is made.
 
-### Excel Tracking
+Excel Tracking
 
 All applications are stored and updated automatically.
 
-### Power BI Reporting
+Power BI Reporting
 
 Business dashboards provide real-time visibility into application activity.
 
 ---
 
-# Process Walkthrough
+Process Walkthrough
 
-## Step 1 — Finance Application Form
+Step 1 — Finance Application Form
 
 Applicants submit their finance requests using Microsoft Forms.
 
-![Application Form](screenshots/form.png)
+"Application Form" (screenshots/form.png)
 
 ---
 
-## Step 2 — Power Automate Workflow
+Step 2 — Power Automate Workflow
 
-The workflow retrieves form responses, generates Application IDs, enriches data through Microsoft Graph API, and stores records in Excel.
+The workflow retrieves form responses, generates Application IDs, enriches data through Microsoft Graph API, performs AI assessment, and stores records in Excel.
 
-![Workflow Overview](screenshots/flow-overview.png)
-
----
-
-## Step 3 — Enriched Application Records
-
-The workflow enriches application data using Microsoft Graph API and updates records automatically.
-
-![Excel Results](screenshots/excel-results.png)
+"Workflow Overview" (screenshots/flow-overview.png)
 
 ---
 
-## Step 4 — Approval Workflow
+Step 3 — Enriched Application Records
+
+The workflow enriches application data using Microsoft Graph API, generates AI assessments, and updates records automatically.
+
+"Excel Results" (screenshots/excel-results.png)
+
+---
+
+Step 4 — Approval Workflow
 
 The application is automatically routed to a reviewer for approval or rejection.
 
-![Approval Workflow](screenshots/approval-workflow.png)
+"Approval Workflow" (screenshots/approval-workflow.png)
 
 ---
 
-## Step 5 — Manager Approval Request
+Step 5 — Manager Approval Request
 
 The reviewer receives an approval request containing the application details.
 
-![Approval Request](screenshots/approval-email.png)
-
+"Approval Request" (screenshots/approval-email.png)
 
 ---
 
-## Step 6 — Applicant Approval Notification
+Step 6 — Applicant Approval Notification
 
 If approved, the applicant receives an automatic approval email.
 
-![Approved Email](screenshots/approved-email.png)
+"Approved Email" (screenshots/approved-email.png)
 
 ---
 
-## Step 7 — Applicant Rejection Notification
+Step 7 — Applicant Rejection Notification
 
 If rejected, the applicant receives an automatic rejection email.
 
-![Rejected Email](screenshots/rejected-email.png)
+"Rejected Email" (screenshots/rejected-email.png)
 
 ---
 
-## Step 8 — Power BI Dashboard
+Step 8 — Power BI Dashboard
 
 Business users can monitor applications, approval rates, rejection rates, and trends through Power BI.
 
-![Power BI Dashboard](screenshots/dashboard.png)
+"Power BI Dashboard" (screenshots/dashboard.png)
 
 ---
 
-## Skills Demonstrated
+Skills Demonstrated
 
 - Business Process Automation
 - Microsoft Power Automate
@@ -202,10 +214,13 @@ Business users can monitor applications, approval rates, rejection rates, and tr
 - Power BI Reporting
 - Business Intelligence
 - Low-Code Development
+- AI Integration
+- Prompt Engineering
+- Generative AI
 
 ---
 
-## Business Benefits
+Business Benefits
 
 - Reduced manual effort
 - Faster approval processing
@@ -216,12 +231,11 @@ Business users can monitor applications, approval rates, rejection rates, and tr
 
 ---
 
-## Future Enhancements
+Future Enhancements
 
 Potential future improvements include:
 
 - Multi-level approvals
-- AI-assisted application assessment
 - Risk scoring engine
 - Dataverse integration
 - SharePoint integration
@@ -232,9 +246,9 @@ Potential future improvements include:
 
 ---
 
-## Author
+Author
 
-**Forough Moosavi**
+Forough Moosavi
 
 Data Analyst | Business Intelligence | Process Automation
 
@@ -244,6 +258,6 @@ https://www.linkedin.com/in/forough-s-moosavi
 
 ---
 
-## License
+License
 
 This project is provided for educational, demonstration, and portfolio purposes.
