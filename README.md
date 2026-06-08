@@ -158,7 +158,7 @@ The workflow retrieves form responses, generates Application IDs, enriches data 
 
 The workflow enriches application data using Microsoft Graph API, generates AI assessments, and updates records automatically.
 
-![Excel Results](screenshots/excel-results.png)
+![Excel Results](screenshots/excel-results2.png)
 
 ---
 
