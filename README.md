@@ -150,7 +150,7 @@ Applicants submit their finance requests using Microsoft Forms.
 
 The workflow retrieves form responses, generates Application IDs, enriches data through Microsoft Graph API, performs AI assessment, and stores records in Excel.
 
-![Workflow Overview](screenshots/flow-overview.png)
+![Workflow Overview](screenshots/flow-overview2.png)
 
 ---
 
